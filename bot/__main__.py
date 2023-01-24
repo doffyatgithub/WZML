@@ -151,11 +151,11 @@ def start(update, context):
     buttons = ButtonMaker()
     if config_dict['EMOJI_THEME']:
         buttons.buildbutton(f"😎 {config_dict['START_BTN1_NAME']}", f"{config_dict['START_BTN1_URL']}")
-        buttons.buildbutton(f"🔥 {config_dict['START_BTN2_NAME']}", f"{config_dict['START_BTN2_URL']}")
+        #buttons.buildbutton(f"🔥 {config_dict['START_BTN2_NAME']}", f"{config_dict['START_BTN2_URL']}")
     else:
         buttons.buildbutton(f"{config_dict['START_BTN1_NAME']}", f"{config_dict['START_BTN1_URL']}")
-        buttons.buildbutton(f"{config_dict['START_BTN2_NAME']}", f"{config_dict['START_BTN2_URL']}")
-    reply_markup = buttons.build_menu(2)
+        #buttons.buildbutton(f"{config_dict['START_BTN2_NAME']}", f"{config_dict['START_BTN2_URL']}")
+    reply_markup = buttons.build_menu(1)
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''This bot can mirror all your links to Google Drive!
 Type /{BotCommands.HelpCommand} to get a list of available commands
